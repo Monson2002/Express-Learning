@@ -5,7 +5,7 @@ const app = express()
 app.set('view engine', 'ejs')
 
 app.get('/ejs', (req, res) => {
-    res.render('index')
+    res.render('index', {title: 'E'})
 })
 
 // Function / Middleware
@@ -22,7 +22,5 @@ app.get('/', (req, res) => {
 app.get('/profile/:username', (req,res)=> {
     res.send(`Hi, I am ${req.params.username}`)
 })
-
-
 
 app.listen(3000)
